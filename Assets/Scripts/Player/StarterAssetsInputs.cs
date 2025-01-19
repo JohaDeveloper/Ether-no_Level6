@@ -20,11 +20,24 @@ namespace StarterAssets
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
 
+		private PlayerController playerController;
+
+		private void Awake()
+		{
+			playerController = gameObject.GetComponent<PlayerController>();
+		}
+
 #if ENABLE_INPUT_SYSTEM
 		public void OnMove(InputValue value)
 		{
-			MoveInput(value.Get<Vector2>());
+			if(playerController.isBlocking || playerController.isAttacking)
+			return;
+			
+			 MoveInput(value.Get<Vector2>());
+			
+
 		}
+		
 
 		public void OnLook(InputValue value)
 		{
