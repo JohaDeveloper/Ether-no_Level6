@@ -565,6 +565,50 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3211277868943180232, guid: 280fed9069559be469ea126d5aaf0090, type: 3}
+      propertyPath: m_TreeDistance
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211277868943180232, guid: 280fed9069559be469ea126d5aaf0090, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211277868943180232, guid: 280fed9069559be469ea126d5aaf0090, type: 3}
+      propertyPath: m_SplatMapDistance
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211277868943180232, guid: 280fed9069559be469ea126d5aaf0090, type: 3}
+      propertyPath: m_ShadowCastingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211277868943180232, guid: 280fed9069559be469ea126d5aaf0090, type: 3}
+      propertyPath: m_DetailObjectDensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211277868943180232, guid: 280fed9069559be469ea126d5aaf0090, type: 3}
+      propertyPath: m_HeightmapPixelError
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211277868943180232, guid: 280fed9069559be469ea126d5aaf0090, type: 3}
+      propertyPath: m_TreeCrossFadeLength
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211277868943180232, guid: 280fed9069559be469ea126d5aaf0090, type: 3}
+      propertyPath: m_DetailObjectDistance
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211277868943180232, guid: 280fed9069559be469ea126d5aaf0090, type: 3}
+      propertyPath: m_ReflectionProbeUsage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211277868943180232, guid: 280fed9069559be469ea126d5aaf0090, type: 3}
+      propertyPath: m_TreeBillboardDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211277868943180232, guid: 280fed9069559be469ea126d5aaf0090, type: 3}
+      propertyPath: m_BakeLightProbesForTrees
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3274591147249494882, guid: 280fed9069559be469ea126d5aaf0090, type: 3}
       propertyPath: m_Enabled
       value: 0
