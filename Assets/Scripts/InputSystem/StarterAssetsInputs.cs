@@ -34,7 +34,6 @@ namespace StarterAssets
 			return;
 			
 			 MoveInput(value.Get<Vector2>());
-			
 
 		}
 		
