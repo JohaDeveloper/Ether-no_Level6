@@ -5,7 +5,6 @@ Prototipo para el curso de Desarrollo de Videojuegos de Academy By Polygonus
 - Andres Burbano Berrocal 		    andresbur10@hotmail.com 
 - Johana Andrea Sepúlveda García	johsega@gmail.com 
 - José Ricardo Giraldo Loaiza		  josericardo1124@hotmail.com 
-- Juan Camilo Echeverri Salazar	  juancami98.11@hotmail.com
 
 ## Contexto general
 Ether-no es un juego de acción y aventura en tercera persona ambientado en un mundo oscuro y gótico. El jugador asume el rol de Dany Boy, un héroe que debe enfrentarse a la Bruja de las Adicciones para liberar a los niños y restaurar la paz en un mundo devastado por las adicciones y la oscuridad.
