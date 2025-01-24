@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     //Blocking Parameters
     public bool isBlocking;
 
-    //SpecialAttack Parameters
+    //Jamping Parameters
     public bool isJumping;
 
     //Attack Parameters
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
         timeSinceAttack += Time.deltaTime;
 
         Attack();
-
+        Jump();
         Block();
         SpecialAttack();
     }
@@ -47,17 +47,31 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void Jump()
+    {
+        if (Input.GetKey(KeyCode.Space) && playerAnim.GetBool("Grounded"))
+        {
+            playerAnim.SetBool("Jump", true);
+            isJumping = true;
+        }
+        else
+        {
+            playerAnim.SetBool("Jump", false);
+            isJumping = false;
+        }
+    }
+
     public void SpecialAttack()
     {
         if (Input.GetKey(KeyCode.Mouse2) && playerAnim.GetBool("Grounded"))
         {
             playerAnim.SetBool("SpecialAttack", true);
-            isJumping = true;
+            isAttacking = true;
         }
         else
         {
             playerAnim.SetBool("SpecialAttack", false);
-            isJumping = false;
+            isAttacking = false;
         }
     }
 
@@ -83,7 +97,7 @@ public class PlayerController : MonoBehaviour
             //Reset Timer
             timeSinceAttack = 0;
         }
-    }
+   }
 
     //This will be used at animation event
     public void ResetAttack()
