@@ -80,8 +80,8 @@ public class Enemy : MonoBehaviour
     void Die()
     {   
         
-        animator.SetTrigger("die");
         isAlive = false;
+        animator.SetTrigger("die");
         DieAudio.Play();
         DieVFX(transform.position += Vector3.up);
         //Item(transform.position);
