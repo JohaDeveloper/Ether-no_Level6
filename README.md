@@ -1,3 +1,5 @@
+[![Build project](https://github.com/JohaDeveloper/Ether-no_Level6/actions/workflows/Build.yml/badge.svg)](https://github.com/JohaDeveloper/Ether-no_Level6/actions/workflows/Build.yml)
+
 # Ether-no Nivel 6 <br> "La fortaleza de la Bruja o señora de las adicciones"
 Prototipo para el curso de Desarrollo de Videojuegos de Academy By Polygonus
 
