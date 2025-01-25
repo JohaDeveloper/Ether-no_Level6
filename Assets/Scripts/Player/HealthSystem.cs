@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
  
 public class HealthSystem : MonoBehaviour
 {
@@ -11,8 +12,9 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] GameObject powerupVFX;
     [SerializeField] AudioSource DieAudio;
     [SerializeField] AudioSource PowerUpAudio;
+    [SerializeField] AudioSource DamageAudio;
  
-    float dietime = 5.0f;
+    float dietime = 3.0f;
     bool isAlive = true;
 
     public UnityEvent OnHealthChanged;
@@ -37,9 +39,11 @@ public class HealthSystem : MonoBehaviour
         {
             return;
         }
+
         health -= damageAmount;
         animator.SetTrigger("damage");
         OnHealthChanged.Invoke();
+        DamageAudio.Play();
 
         if (health <= 0)
         {
@@ -59,13 +63,21 @@ public class HealthSystem : MonoBehaviour
 
    }
 
-    void Die()
-    {
-        isAlive = false;
-        DieAudio.Play();
-        animator.SetTrigger("Die");
-        Destroy(this.gameObject,dietime);
-    }
+    public void Die()
+{
+    isAlive = false;
+    DieAudio.Play();
+    animator.SetTrigger("Die");
+
+    // Programar la destrucción del objeto después de dietime segundos
+    Invoke(nameof(DestroyObject), dietime);
+}
+
+private void DestroyObject()
+{
+    Destroy(this.gameObject);
+    Restart();
+}
 
     public void HitVFX(Vector3 hitPosition)
     {
@@ -80,5 +92,10 @@ public class HealthSystem : MonoBehaviour
         Destroy(powerup, 3f);
  
     }
+
+    public void Restart ()
+   {
+       SceneManager.LoadScene("Level6");
+   }
     
 }
